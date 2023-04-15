@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rebríček najlepších filmov</title>
+    <script src="https://kit.fontawesome.com/6d664e133f.js" crossorigin="anonymous"></script>
+    <style>
+        section{
+            width: 960px;
+            margin: 0 auto;
+        }
+        h1{
+            font-size: 35px;
+            text-align: center;
+            text-decoration: underline;
+            padding-bottom: 25px;
+            margin-top: 10px;
+        }
+
+        .home-btn{
+            display: flex;
+            justify-content: center;
+        }
+
+        a{
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #fff;       
+            background: #F24405;
+            border: 1px solid #F24405;
+            border-radius: 8px;    
+            padding: 16px 45px;    
+            cursor: pointer;
+        }
+        a:hover,
+        a:focus{
+            background: #FA591F;
+            border: 1px solid #FA591F;
+        }
+        table{
+            margin: 0 auto;
+            border-collapse: collapse;
+            margin-top: 55px;
+            
+        }
+        thead tr{
+            background: #348888;
+            font-size: 22px;
+        }
+        th{
+            padding: 10px 15px;
+            border: 1px solid #000;
+        }
+        td{
+            font-size: 18px;
+            border: 1px solid #348888;
+            padding: 5px 8px;
+        }
+        tr:nth-child(even){
+            background: #9EF8EE;
+        }
+        td:nth-child(1){
+            text-align: right;
+        }
+        td:nth-child(3),
+        td:nth-child(4){
+            text-align: center;
+        }
+        .good-rank{
+            color: green;
+        }
+
+        .first-tool .tooltip{
+            position: absolute;
+            left: 221px;
+            top: 252px;
+            background-color: #348888;
+            padding: 15px;
+            border-radius: 6px;
+            visibility: hidden;
+        }
+
+        .tool-text{
+            display: block;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 18px;
+            margin-bottom: 7px;
+        }
+
+        .tooltip img{
+            width: 140px;
+            height: 180px;
+        }
+
+        .first-tool:hover .tooltip{
+            visibility: visible;
+        }
+
+        .second-tool .tooltip{
+            position: absolute;
+            left: 221px;
+            top: 284px;
+            background-color: #348888;
+            padding: 15px;
+            border-radius: 6px;
+            visibility: hidden;
+        }
+
+        .second-tool:hover .tooltip{
+            visibility: visible;
+        }
+
+        .third-tool .tooltip{
+            position: absolute;
+            left: 221px;
+            top: 316px;
+            background-color: #348888;
+            padding: 15px;
+            border-radius: 6px;
+            visibility: hidden;   
+        }
+
+        .third-tool:hover .tooltip{
+            visibility: visible;
+        }
+
+        .fourth-tool .tooltip{
+            position: absolute;
+            left: 221px;
+            top: 347px;
+            background-color: #348888;
+            padding: 15px;
+            border-radius: 6px;
+            visibility: hidden;   
+        }
+
+        .fourth-tool:hover .tooltip{
+            visibility: visible;
+        }
+
+        .fiveth-tool .tooltip{
+            position: absolute;
+            left: 221px;
+            top: 378.5px;
+            background-color: #348888;
+            padding: 15px;
+            border-radius: 6px;
+            visibility: hidden;   
+        }
+
+        .fiveth-tool:hover .tooltip{
+            visibility: visible;
+        }
+
+        .first-tool,
+        .second-tool,
+        .third-tool,
+        .fourth-tool,
+        .fiveth-tool{
+            cursor: pointer;
+        }
+
+        .tooltip:before{
+            content:'\f04b';
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            font-size: 30px;
+            position: absolute;
+            top: 7px;
+            right: -19px;
+            color: #348888;
+        }
+       
+        h2{
+            margin: 75px 0px 35px 0px;
+        }
+        figure{
+            width: 350px;
+            height: 550px;
+            float: left;
+            padding-right: 52px;
+        }
+        p{
+            font-size: 17px;
+            line-height: 20px;
+            padding-top: 15px;
+        }
+
+        audio{
+            margin-left: 105px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <section>
+        <h1>Rebríček najlepších filmov</h1>   
+        <div class="home-btn">
+            <a href="../index.html">Domov</a>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Poradie</th>
+                    <th>Názov filmu</th>
+                    <th>Rok vydania</th>
+                    <th>Hodnotenie &percnt;</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1.</td>
+                    <td class="first-tool">Vykúpenie z väznice Shawshank
+                        <div class="tooltip">
+                            <span class="tool-text">Tim Robbins</span>
+                            <img src="img/tim-robbins-tooltip-img.jpg" alt="">
+                        </div>
+                    </td>
+                    <td>1994</td>
+                    <td class="good-rank">95,3 &percnt;</td>
+                </tr>
+                <tr>
+                    <td>2.</td>
+                    <td class="second-tool">Forrest Gump
+                        <div class="tooltip">
+                            <span class="tool-text">Tom Hanks</span>
+                            <img src="img/tom-hanks-tooltip-img.jpg" alt="">
+                        </div>
+                    </td>
+                    <td>1994</td>
+                    <td class="good-rank">94,5 &percnt;</td>
+                </tr>
+                <tr>
+                    <td>3.</td>
+                    <td class="third-tool">Zelená míľa
+                        <div class="tooltip">
+                            <span class="tool-text">Michael Clarke</span>
+                            <img src="img/michael-clarke-tooltip-img.jpg" alt="">
+                        </div>
+                    </td>
+                    <td>1999</td>
+                    <td class="good-rank">92,9 &percnt;</td>
+                </tr>
+                <tr>
+                    <td>4.</td>
+                    <td class="fourth-tool">Sedem
+                        <div class="tooltip">
+                            <span class="tool-text">Brad Pitt</span>
+                            <img src="img/brad-pitt-tooltip-img.jpg" alt="">
+                        </div>
+                    </td>
+                    <td>1995</td>
+                    <td class="good-rank">92,4 &percnt;</td>
+                </tr>
+                <tr>
+                    <td>5.</td>
+                    <td class="fiveth-tool">Prelet nad kukučím hniezdom
+                        <div class="tooltip">
+                            <span class="tool-text">Jack Nicholson</span>
+                            <img src="img/jack-nicholson-tooltip-img.jpg" alt="">
+                        </div>
+                    </td>
+                    <td>1975</td>
+                    <td class="good-rank">92,5 &percnt;</td>
+                </tr>
+                <tr>
+                    <td>6.</td>
+                    <td>Schindlerov zoznam</td>
+                    <td>1993</td>
+                    <td class="good-rank">92,3 &percnt;</td>
+                </tr>
+                <tr>
+                    <td>7.</td>
+                    <td>Krstný otec</td>
+                    <td>1972</td>
+                    <td>91,8 &percnt;</td>
+                </tr>
+                <tr>
+                    <td>8.</td>
+                    <td>Dvanásť roznehvaných mužov</td>
+                    <td>1957</td>
+                    <td>91,4 &percnt;</td>
+                </tr>
+                <tr>
+                    <td>9.</td>
+                    <td>Nedotknuteľní</td>
+                    <td>2011</td>
+                    <td>91,3 &percnt;</td>
+                </tr>
+                <tr>
+                    <td>10.</td>
+                    <td>Pelíšky</td>
+                    <td>1999</td>
+                    <td>91,2 &percnt;</td>
+                </tr>
+                <tr>
+                    <td>11.</td>
+                    <td>Terminátor 2: Deň zúčtovania</td>
+                    <td>1991</td>
+                    <td>90,9 &percnt;</td>
+                </tr>
+                <tr>
+                    <td>12.</td>
+                    <td>Pulp Fiction: Historky z podsvetia</td>
+                    <td>1994</td>
+                    <td>90,7 &percnt;</td>
+                </tr>
+                <tr>
+                    <td>13.</td>
+                    <td>Krstný otec II</td>
+                    <td>1974</td>
+                    <td>90,8 &percnt;</td>
+                </tr>
+                <tr>
+                    <td>14.</td>
+                    <td>Pán prsteňov: Spoločenstvo prsteňa</td>
+                    <td>2001</td>
+                    <td>90,6 &percnt;</td>
+                </tr>
+                <tr>
+                    <td>15.</td>
+                    <td>Pán prsteňov: Návrat kráľa</td>
+                    <td>2003</td>
+                    <td>90,6 &percnt;</td>
+                </tr>
+                <tr>
+                    <td>16.</td>
+                    <td>Mlčanie jahniat</td>
+                    <td>1991</td>
+                    <td>90,5 &percnt;</td>
+                </tr>
+                <tr>
+                    <td>17.</td>
+                    <td>Vtedy na Západe</td>
+                    <td>1968</td>
+                    <td>90,5 &percnt;</td>
+                </tr>
+                <tr>
+                    <td>18.</td>
+                    <td>Temný rytier</td>
+                    <td>2008</td>
+                    <td>90,4 &percnt;</td>
+                </tr>
+                <tr>
+                    <td>19.</td>
+                    <td>Gran Torino</td>
+                    <td>2008</td>
+                    <td>90,3 &percnt;</td>
+                </tr>
+                <tr>
+                    <td>20.</td>
+                    <td>Matrix</td>
+                    <td>1999</td>
+                    <td>90,2 &percnt;</td>
+                </tr>
+            </tbody>           
+        </table>
+        <h2>Top film: Vykúpenie z väznice Shawshank</h2>
+        <figure>
+            <img src="img/movie.jpg" alt="Vykúpenie z väznice Shawshank">
+            <figcaption>Vykúpenie z väznice Shawshank</figcaption>
+        </figure>
+        <aside>
+            <p>
+                Mladého a úspešného viceprezidenta banky Andyho Dufresnea (Tim Robbins) v roku 1946 odsúdia na doživotie za vraždu svojej manželky a jej milenca. On sám síce tvrdí, že je nevinný, ale nedokáže to na súde preukázať. Dostane sa do väznice Shawshank, kde sú všetci na doživotie. Dočká sa šikanovania, depresií, tvrdej práce, ale postupne sa adaptuje a spriatelí sa s Redom (Morgan Freeman), černošským väzňom, ktorý ako jediný priznáva, že je vinný. Po nejakom čase pomôže Andy jednému dozorcovi vyriešiť problém s daňovým priznaním. A netrvá dlho a stane sa vyhľadávaným daňovým poradcom nielen všetkých dozorcov, ale predovšetkým riaditeľa väznice, pokryteckého a zákerného Nortona (Bob Gunton). S Andyho pomocou rozbehne Norton neuveriteľné finančné machinácie a podnikateľské aktivity, na ktorých fantasticky zarába. Andy sa tak stane prominentným väzňom. Nečakaný obrat nastane vo chvíli, keď jeden z nových väzňov, mladý Tommy, rozpráva Andymu o človeku, s ktorým sedel v inej väznici, a ten sa priznal, že zavraždil Andyho ženu a jej milenca. Andy chce okamžite obnoviť svoj proces, ale narazí na tvrdý odpor riaditeľa Nortona. Ten si nemôže dovoliť o Andyho prísť, ale nielen pre svoje kšefty, ale ja zo strachu, že Andy by mohol na slobode prehovoriť o riaditeľových podvodoch. Andy sa tak znovu ocitne na dne, ale nie je taký hlúpy, ani bezmocný, ako si Norton myslí. Dokáže totiž využiť svoje schopnosti finančného poradcu najmä pre seba, a tak má teraz v rukách kľúč k veľkému majetku. Po celý čas si tiež tajne kope dieru, aby z väznice ušiel...
+            </p>
+        </aside>
+        <audio controls autoplay>
+            <source src="music/relaxed-vlog-night-street-131746.mp3" type="audio/mpeg" >
+        </audio>
+    </section>
+</body>
+</html>

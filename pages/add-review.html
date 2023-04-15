@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/6d664e133f.js" crossorigin="anonymous"></script>
+    <title>Pridať recenziu</title>
+
+    <style>
+        body{
+            background-image: url(img/bg.png);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            height: 100vh;
+            overflow: hidden; 
+        }
+        
+        ul{
+            display: flex;
+            justify-content: center;
+            gap: 55px;
+            padding: 35px 0px 45px 0px;
+        }
+
+        li{
+            list-style: none;
+        }
+        
+        a{
+            font-size: 28px;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        a:hover,
+        a:focus{
+            text-decoration: underline;
+        }
+
+        .content-box{
+            border: 3px solid #171C26;
+            border-radius: 5px;
+            max-width: 45%;
+            margin: 0 auto;
+            margin-top: 90px;
+            min-height: 400px;
+            padding: 15px;
+            padding-right: 0px;
+            background: #8C846C;
+        }
+
+        input,
+        textarea{
+            border: 4px solid #A68729;
+            border-radius: 5px;
+            outline: none; 
+        }
+
+        input:focus,
+        textarea:focus{
+            border: 4px solid #FF392E;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        .left-side{
+            float: left;
+            width: 48%;
+            border-right: 2px solid black;
+            margin-top: -5px;
+        }
+        
+        label{
+            display: block;
+        }
+
+        .left-side label{
+            display: block;
+            font-size: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin: 5px 0 5px 5px;
+        }
+
+        .left-side input{
+            padding: 9px 120px 9px 5px;
+        }
+
+        input::placeholder{
+            font-size: 14px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        textarea{
+            resize: none;
+            width: 285px;
+            height: 140px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        textarea::placeholder{
+            font-size: 14px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+        }
+
+        .right-side label{
+            display: inline;
+            font-size: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        label{
+            margin-top: 15px;
+        }
+
+        input.date{
+            margin-top: 40px;
+        }
+
+        label.date{
+           margin-left: 20px;
+           margin-right: 11px;
+        }
+
+        input.date{
+            padding: 3px 8px;
+        }
+
+        label.range{
+           margin-left: 20px;
+           margin-right: 45px;
+        }
+
+        input.range{
+            margin-top: 48px;
+        }
+
+        label.type{
+            display: block;
+            text-align: center;
+            margin-top: 43px;
+            margin-bottom: 18px;
+            text-transform: uppercase;
+            text-decoration: underline;
+        }
+
+        label.radio-text{
+            display: inline;
+            font-size: 16px;
+            cursor: pointer;
+            margin-left: 2px;
+            margin-right: -3px;
+            text-align: center;
+            padding-left: 6px;
+        }
+
+        .btn{
+            padding: 11px 95px;
+            margin-left: 57px;
+            margin-top: 55px;
+            cursor: pointer;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 16px;
+        }
+
+        .btn:hover,
+        .btn:focus{
+            border: 4px solid #FF392E;
+            border-radius: 5px;
+        }
+
+        .fa-video,
+        .fa-user-pen,
+        .fa-at,
+        .fa-pen-fancy{
+            margin-left: 7px;
+            font-size: 16px;
+            color:#000000db;
+        }
+
+        .logo-box{
+            width: 65px;
+            height: 65px;
+            position: relative;
+            left: 50%;
+            margin-left: -38px;
+            margin-top: 4px;
+            
+        }
+
+        .red{
+            width: 39px;
+            height: 39px;
+            border: 6px solid red;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 4;
+        }
+
+        .blue{
+            width: 39px;
+            height: 39px;
+            border: 6px solid blue;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: 3;
+        }
+
+        .green{
+            width: 39px;
+            height: 39px;
+            border: 6px solid green;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 2;
+        }
+
+        .orange{
+            width: 39px;
+            height: 39px;
+            border: 6px solid orange;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Domov</a></li>
+                <li><a href="ranking.html">Rebríček najlepších filmov</a></li>
+                <li><a href="add-review.html">Pridať recenziu</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="content-box">
+        <form action="#">
+            <div class="left-side">
+                <label for="nazov-filmu">Názov filmu<i class="fa-solid fa-video"></i></label>
+                <input class="box" type="text" name="film-name" id="nazov-filmu" placeholder="..." required >
+                <label for="name">Meno<i class="fa-solid fa-user-pen"></i></label>
+                <input class="box" type="text" name="name" id="name" placeholder="Meno">
+                <label for="email">Email<i class="fa-solid fa-at"></i></label>
+                <input class="box"  type="email" name="email" id="email" placeholder="@" required>
+                <label for="comment">Hodnotenie filmu<i class="fa-solid fa-pen-fancy"></i></label>
+                <textarea name="comment" id="comment" placeholder="Text"></textarea>
+            </div> 
+            <div class="right-side">  
+                <label class="date" for="date">Film som pozeral</label>
+                <input class="date" type="date" name="date" id="date">
+                <label class="range" for="range">Počet bodov</label>
+                <input class="range" type="range" name="range" id="range" min="0" max="100" step="10" required> 
+                <label class="type">Žáner</label>
+                <label class="radio-text" for="komedia">Komédia</label>
+                <input type="radio" name="type" id="komedia" value="Komédia">
+                <label class="radio-text" for="drama">Dráma</label>
+                <input type="radio" name="type" id="drama" value="Dráma">
+                <label class="radio-text" for="akcny">Akčný</label>
+                <input type="radio" name="type" id="akcny" value="Akčný">
+                <label class="radio-text" for="zivotopisny">Životopisný</label>
+                <input type="radio" name="type" id="zivotopisny" value="Životopisný">
+                <input class="btn" name="btn" type="submit" value="Odoslať">
+            </div>     
+        </form> 
+    </div>
+    <section class="logo">
+        <div class="logo-box">
+            <div class="red"></div>
+            <div class="blue"></div>
+            <div class="green"></div>
+            <div class="orange"></div>
+        </div>
+    </section>    
+</body>
+</html>
